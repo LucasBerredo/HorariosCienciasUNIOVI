@@ -27,7 +27,7 @@ horasPorDia = [6,6,6,3,0,6,6,6,4,5,6,6,7,4,5,7,6,7,5,6,6,6,6,4,5,6,6,7,4,6,6,6,5
 # Función - Admite un csv y crea un archivo por cada evento
 def createFileFromCSV(j,k):
     with open("archivosCSV/"+str(5*j+k)+".csv", newline='') as csvfile:
-        day = str(datetime.today() + timedelta(days=(7*j+k)))
+        day = str(datetime(2024,1,21) + timedelta(days=(7*j+k)))
         day = day[0:4] + day[5:7] + day[8:10]
         day = str(int(day)+1)
         reader = csv.reader(csvfile, delimiter=';', quotechar='|')
